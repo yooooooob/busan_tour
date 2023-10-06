@@ -19,7 +19,7 @@ const TourList = () => {
             //에러가 없다면 try안에 코드 실행
             //에러가 있다면 catch 값으로 넘어감*/
             try {
-                const response = await axios.get(`https://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=10&pageNo=1&resultType=json`)
+                const response = await axios.get(`http://apis.data.go.kr/6260000/AttractionService/getAttractionKr?serviceKey=${key}&numOfRows=10&pageNo=1&resultType=json`)
                 setTour(response.data.getAttractionKr.item)
 
             } catch (error) {
@@ -32,7 +32,7 @@ const TourList = () => {
 
     return (
         <div className="list">
-            <h3>Busan Tour</h3>
+            <h3>부산 여행 어디가 좋을까?</h3>
             <div className="main_list">
                 {tour.map((tourMap) => (
                     <TourItem article={tourMap}/>

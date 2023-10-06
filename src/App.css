@@ -13,13 +13,25 @@
 }
 
 
-  @font-face {
-    font-family: 'NanumSquareNeo-Variable';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'KCC-Ganpan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -50,7 +62,7 @@ img {
   border-radius: 10px;
 }
 
-img:hover {
+.title img:hover {
   transform: scale(0.9);
   transition: 1s;
   cursor: pointer;
@@ -68,22 +80,45 @@ body {
 }
 
 header {
-  border-bottom: 5px dashed #59688d;
+  width: 100%;
+  background-color: #8fa3d5;
+  height: 100px;
+  position: relative;
 }
 
 header h1 {
-  font-size: 20px;
-  text-align: end;
-  color: #92a1c9a1;
-  margin: 20px;
-  font-family: 'SOYOMapleBoldTTF';
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 
-header h1:hover {
+header h1 a {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+header strong {
+  font-family: 'Cafe24Ssurround';
+  font-size: 40px;
+  color: aliceblue;
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+
+}
+
+
+/* header h1:hover {
   color: #59688d;
   cursor: pointer;
 }
-
+ */
 
 .list {
   margin: 10px 0 100px;
@@ -144,7 +179,7 @@ header h1:hover {
 
 .list h3::before {
   content: '';
-  width: 300px;
+  width: 350px;
   height: 10px;
   background-color: rgba(229, 113, 200, 0.667);
   display: block;
@@ -202,7 +237,7 @@ header h1:hover {
   content: '';
   width: 22px;
   height: 21px;
-  background: url('../img/busantour_btn.png') center center / cover no-repeat;
+  background: url('/public/img/busantour_btn.png') center center / cover no-repeat;
   display: block;
 
   position: absolute;
@@ -211,7 +246,7 @@ header h1:hover {
 }
 
 .list .main_list .item a:hover::before {
-  background: url('../img/busantour_btn_blue.png')center center / cover no-repeat;
+  background: url('/public/img/busantour_btn_blue.png')center center / cover no-repeat;
 }
 
 
@@ -224,8 +259,11 @@ footer {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+  color: azure;
 
-  background-color: #a3abbf;
+  background-color: #8fa3d5;
+
+  /* #a3abbf ,#8fa3d5 */
 }
 
 footer ul {
@@ -234,10 +272,9 @@ footer ul {
 
 footer ul li {
   width: calc(100% / 4);
-
   text-align: center;
 }
 
 footer ul li:hover {
-  color: azure;
+  color: #555;
 }
